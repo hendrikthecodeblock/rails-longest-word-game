@@ -1,0 +1,19 @@
+<div class="row d-flex justify-content-center">
+  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+    <div class="card">
+      <div class="card-header"><h2>Longest Word Game</h2></div>
+      <div class="card-body height3">
+        <h2>Your Grid:</h2>
+        <p><%= @grid %></p>
+        <form action="/score" method="POST" data-turbo="false">
+          <label for="guess" class="form-label">What is the longest word you can find?</label>
+          <input type="text" name="guess" id="guess" class="form-control">
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+          <input type="hidden" name="grid" value="<%= @grid %>">
+          <input type="hidden" name="start_time" value="<%= @start_time %>">
+          <div>
+            <input type="submit" value="Play" class="btn btn-dark mt-3">
+          </div>
+        </form>
+      </div>
+    </div>
