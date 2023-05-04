@@ -23,6 +23,21 @@ a:hover {
   color:white;
 }
 
+.letters {
+  display:flex;
+  margin-bottom: 5px;
+}
+
+li {
+list-style-type: none;
+border: 1px solid black;
+margin: 3px;
+width: 50px;
+text-align: center;
+color: #ffffff;
+background-color: black;
+}
+
 .card .card-header:first-child {
   -webkit-border-radius: 0.3rem 0.3rem 0 0;
   -moz-border-radius: 0.3rem 0.3rem 0 0;

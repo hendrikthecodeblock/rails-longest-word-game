@@ -3,13 +3,17 @@ require "json"
 
 class GamesController < ApplicationController
   def new
-    @grid = generate_grid(10).join(" ")
+    # @grid = generate_grid(10).join(" ")
+    @grid = generate_grid(10)
     @start_time = Time.now
+
   end
 
   def score
     # get data from form
     grid = params[:grid].split("")
+
+
     @guess = params[:guess]
     start_time = Time.parse(params[:start_time])
     end_time = Time.now
